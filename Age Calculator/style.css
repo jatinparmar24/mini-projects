@@ -37,7 +37,7 @@ body{
 }
 
 #mid:hover{
-    
+   
     background: linear-gradient(orange,blueviolet);
     color: antiquewhite;
 }

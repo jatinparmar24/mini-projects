@@ -1,0 +1,46 @@
+*{
+    margin: 0%;
+    padding: 0cap;
+    box-sizing: border-box;
+}
+
+#shed{
+    background: linear-gradient(to left,rgb(6, 202, 246),rgb(4, 243, 4),coral);
+}
+
+#gold1{
+    position: absolute;
+    top: 12%;
+    left: 38%;
+    font-size: 60px;
+    color: rgb(99, 8, 216);
+}
+#inp{
+    position: absolute;
+    top: 35%;
+    left: 40%;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    background-color: rgba(232, 239, 2, 0.799);
+    color: brown;
+}
+
+#inpbt{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    width: 200px;
+    height: 50px;
+    font-size: 30px;
+    color: crimson;
+    background-color: cyan;
+}
+
+#shows{
+    position: absolute;
+    top: 48%;
+    left: 40%;
+    font-size: 35px;
+    color: red;
+}

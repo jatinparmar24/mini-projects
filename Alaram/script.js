@@ -26,7 +26,7 @@ let rune=()=>{
     }
 
     else{
-      war.innerHTML="Alarm Set";
+      war.innerHTML=`Alarm Set For  ${show1}`;
     }
   },1000)
   }
