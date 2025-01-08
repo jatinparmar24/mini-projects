@@ -1,0 +1,37 @@
+*{
+    margin: 0%;
+    padding: 0cap;
+    box-sizing: border-box;
+}
+
+#try{
+    background: linear-gradient(to right,red,blue);
+
+}
+
+#gold{
+    display: flex;
+    justify-content: center;
+    margin-top: 12%;
+    font-size: 45px;
+    color: rgb(245, 137, 6);
+    background: linear-gradient(to right,red,blue);
+}
+
+#middle{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 43%;
+    margin-top: 5%;
+    background: linear-gradient(coral,yellow,coral);
+}
+#display{
+  color: red;
+}
+

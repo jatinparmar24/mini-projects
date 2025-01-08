@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 body{
-    background-color: cornflowerblue;
+    background-color: bisque;
+    
     
 }
 #cent{
@@ -31,7 +32,14 @@ body{
     top: 365px;
     left: 36%;
     background-color: mediumaquamarine;
-    color: blueviolet;
+    color: indianred;
+   
+}
+
+#mid:hover{
+    
+    background: linear-gradient(orange,blueviolet);
+    color: antiquewhite;
 }
 
 #aga{
