@@ -6,14 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body id="cent">
     
 
-    <h1>My Calculator</h1>
+    <h1 id="hed">My Calculator</h1>
 
     <div>
 
-        <table border="3" align="center" cellspacing="25px" cellpadding="15px">
+        <table border="3" align="center" cellspacing="25px" cellpadding="15px" id="seis">
            
             <tr>
                 <td id="display" colspan="4" ></td>
@@ -48,14 +48,14 @@
             </tr>
 
             <tr>
-                <td onclick="cal('00')">00</td>
+                 <td onclick="cal('.')">.</td>
                 <td onclick="cal('0')">0</td>
-                <td onclick="cal('.')">.</td>
-                <td onclick="result()">=/Enter</td>
+                <td onclick="cal('00')">00</td>
+               <td onclick="squ()">Sq</td>
             </tr>
 
             <tr>
-                <td onclick="squ()">Square</td>
+                <td onclick="result()" colspan="4">=/Enter</td> 
             </tr>
 
 

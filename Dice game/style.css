@@ -1,4 +1,11 @@
-
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+#miid{
+    background: linear-gradient(to left,rgb(72, 242, 72),rgb(246, 175, 44),yellow);
+}
 
 #box1{
     width: 250px;
@@ -117,6 +124,8 @@
     border-radius: 50%;
     background-color: red;
 }
+
+
 
 #box6{
     width: 250px;
