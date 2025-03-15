@@ -5,6 +5,7 @@
 }
 body{
     background-color: bisque;
+
     
     
 }
@@ -37,7 +38,7 @@ body{
 }
 
 #mid:hover{
-   
+    transform: scale(1.1);
     background: linear-gradient(orange,blueviolet);
     color: antiquewhite;
 }
