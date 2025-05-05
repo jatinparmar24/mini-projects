@@ -1,34 +1,123 @@
-*{
-    margin: 0%;
-    padding: 0%;
-    box-sizing: border-box;
-}
-#cent{
-    background: linear-gradient(to right,grey,silver,grey);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#hed{
-    color: darkred;
-    margin-left: 41%;
-    margin-top: 2%;
-    font-size: 45px;
-}
-#seis{
-   background-color: blanchedalmond;
-    position: absolute;
-    top: 15%;
-    left: 40%;
-    width: 300px;height: 500px;
-}
-#seis tr td{
-    padding: 10px;
-    color: rgb(223, 76, 7);
-   
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to bottom right, #1a1a2e, #16213e);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
 }
 
-#seis tr td:hover{
-  background-color: red;
-  color: aqua;
+
+.calculator-container {
+  width: 360px;
+  max-width: 100%;
+  background-color: #222436;
+  border-radius: 16px;
+  padding: 25px 20px;
+  box-shadow: 0 0 25px rgba(0, 234, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
+
+#hed {
+  text-align: center;
+  color: #00eaff;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+
+#display {
+  width: 100%;
+  height: 60px;
+  background-color: #1c1f32;
+  color: #00f0ff;
+  font-size: 2.2em;
+  text-align: right;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  margin-bottom: 20px;
+  outline: none;
+  overflow-x: auto;
+}
+
+
+.row {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+
+button {
+  flex: 1;
+  height: 60px;
+  background-color: #313552;
+  color: #ffffff;
+  font-size: 1.4em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #00eaff;
+  color: #000;
+  transform: translateY(-2px);
+}
+
+
+.row:last-child button {
+  flex: 1;
+  background-color: #00eaff;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.6em;
+  height: 65px;
+  border-radius: 12px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 400px) {
+  .calculator-container {
+    padding: 20px 10px;
+  }
+
+  button {
+    font-size: 1.2em;
+    height: 55px;
+  }
+
+  #display {
+    font-size: 1.8em;
+    height: 55px;
+  }
+}
 

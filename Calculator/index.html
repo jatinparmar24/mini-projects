@@ -1,69 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Calculator</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body id="cent">
-    
+<body>
 
-    <h1 id="hed">My Calculator</h1>
+    <div class="calculator-container">
+        <h1 id="hed">My Calculator</h1>
 
-    <div>
+        <div id="seis">
+            <input type="text" id="display" />
+            
+            <div class="row">
+                <button onclick="allc()">AC</button>
+                <button onclick="del()">Del</button>
+                <button onclick="cal('/')">/</button>
+                <button onclick="cal('%')">%</button>
+            </div>
 
-        <table border="3" align="center" cellspacing="25px" cellpadding="15px" id="seis">
-           
-            <tr>
-                <td id="display" colspan="4" ></td>
-            </tr>
+            <div class="row">
+                <button onclick="cal('1')">1</button>
+                <button onclick="cal('2')">2</button>
+                <button onclick="cal('3')">3</button>
+                <button onclick="cal('*')">*</button>
+            </div>
 
-            <tr>
-                <td onclick="allc()">AC</td>
-                <td onclick="del()">Del</td>
-                <td onclick="cal('/')">/</td>
-                <td onclick="cal('%')">%</td>
-            </tr>
+            <div class="row">
+                <button onclick="cal('4')">4</button>
+                <button onclick="cal('5')">5</button>
+                <button onclick="cal('6')">6</button>
+                <button onclick="cal('-')">-</button>
+            </div>
 
-            <tr>
-                <td onclick="cal('1')">1</td>
-                <td onclick="cal('2')">2</td>
-                <td onclick="cal('3')">3</td>
-                <td onclick="cal('*')">*</td>
-            </tr>
+            <div class="row">
+                <button onclick="cal('7')">7</button>
+                <button onclick="cal('8')">8</button>
+                <button onclick="cal('9')">9</button>
+                <button onclick="cal('+')">+</button>
+            </div>
 
-            <tr>
-                <td onclick="cal('4')">4</td>
-                <td onclick="cal('5')">5</td>
-                <td onclick="cal('6')">6</td>
-                <td onclick="cal('-')">-</td>
-            </tr>
+            <div class="row">
+                <button onclick="cal('.')">.</button>
+                <button onclick="cal('0')">0</button>
+                <button onclick="cal('00')">00</button>
+                <button onclick="squ()">Sq</button>
+            </div>
 
-            <tr>
-                <td onclick="cal('7')">7</td>
-                <td onclick="cal('8')">8</td>
-                <td onclick="cal('9')">9</td>
-                <td onclick="cal('+')">+</td>
-            </tr>
-
-            <tr>
-                 <td onclick="cal('.')">.</td>
-                <td onclick="cal('0')">0</td>
-                <td onclick="cal('00')">00</td>
-               <td onclick="squ()">Sq</td>
-            </tr>
-
-            <tr>
-                <td onclick="result()" colspan="4">=/Enter</td> 
-            </tr>
-
-
-        </table>
-
+            <div class="row">
+                <button onclick="result()" colspan="4">=/Enter</button>
+            </div>
+        </div>
     </div>
-    
 
     <script src="script.js"></script>
+
 </body>
 </html>
