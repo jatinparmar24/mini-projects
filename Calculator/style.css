@@ -83,7 +83,7 @@ button:hover {
 .row:last-child button {
   flex: 1;
   background-color: #00eaff;
-  color: #000;
+  color: black;
   font-weight: bold;
   font-size: 1.6em;
   height: 65px;

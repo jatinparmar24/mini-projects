@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alarm Clock</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body id="shed">
+<body>
+
+  <div id="alarm">
+    <div id="clock-display">--:--:--</div>
+
+    <h1 id="alarmhead">⏰ Alarm Clock</h1>
     
-    <div id="alarm">
+    <input type="time" id="input_time" />
+    
+    <div class="buttons">
+      <button onclick="set_time()">Set</button>
+      <button onclick="stop_alarm()">Stop</button>
+      <button onclick="snooze_alarm()">Snooze</button>
+    </div>
 
-        <h1 id="gold1">Alarm Clock</h1>
-        <input type="time"  id="inp">
-         <button onclick="rune()" id="inpbt">Set Alarm</button> <br>
-        <h2 id="shows"></h2>
-      <audio src="song/83-nenjukkule-innarendru-tamil-mobcup-vip-65417 (1).mp3" id="sing"></audio>
+    <h2 id="show"></h2>
+    
+    <audio src="song/83-nenjukkule-innarendru-tamil-mobcup-vip-65417 (1).mp3" id="sing"></audio>
+  </div>
 
-     </div>
-
-     <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

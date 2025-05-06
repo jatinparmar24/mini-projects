@@ -1,32 +1,55 @@
+let alarmTime = null;
+let isAlarmSet = false;
+const audio = document.getElementById("sing");
 
-let rune=()=>{
+// Live clock display
+function updateClock() {
+  const now = new Date();
+  document.getElementById("clock-display").innerText = now.toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
 
-    let show1=document.querySelector("#inp").value;
-   
-
-   let inter= setInterval(()=>{
-        
-    let war=document.querySelector("#shows")
-     war.innerHTML=`Alarm Set For ${show1}`
-
-    let time=new Date()   // time in object form=====
-
-      time=`${time.getHours().toString() .padStart(2,"0")}:${time.getMinutes().toString() .padStart(2,"0")}`   // get hours are in  number form so we use to string to change intt string because padstart take value in strinf format ===== padstart take 2 parameter first is how many digit u want to add and secondly whar u want to add
-
-    if(show1==time){
-    war.innerHTML="Alarm Snoozing";
-     document.querySelector("#sing").play()
-    war.style.color="red"
-    war.style.fontSize="50px"
-
-    setTimeout(() => {
-      document.querySelector("#sing").pause()
-      clearInterval(inter)
-    }, 10000);
-    }
-
-    else{
-      war.innerHTML=`Alarm Set For  ${show1}`;
-    }
-  },1000)
+// Set Alarm
+function set_time() {
+  const input = document.getElementById("input_time").value;
+  if (!input) {
+    document.getElementById("show").innerText = "⚠️ Please select a time!";
+    return;
   }
+  alarmTime = input;
+  isAlarmSet = true;
+  document.getElementById("show").innerText = `✅ Alarm set for ${alarmTime}`;
+}
+
+// Stop Alarm
+function stop_alarm() {
+  audio.pause();
+  audio.currentTime = 0;
+  isAlarmSet = false;
+  document.getElementById("show").innerText = "⏹️ Alarm stopped.";
+}
+
+// Snooze Alarm
+function snooze_alarm() {
+  stop_alarm();
+  const now = new Date();
+  now.setMinutes(now.getMinutes() + 5);
+  const h = String(now.getHours()).padStart(2, '0');
+  const m = String(now.getMinutes()).padStart(2, '0');
+  alarmTime = `${h}:${m}`;
+  isAlarmSet = true;
+  document.getElementById("show").innerText = `😴 Snoozed. Next alarm: ${alarmTime}`;
+}
+
+// Alarm trigger check
+setInterval(() => {
+  if (isAlarmSet) {
+    const now = new Date();
+    const currentTime = now.toTimeString().slice(0, 5);
+    if (currentTime === alarmTime) {
+      audio.play();
+      document.getElementById("show").innerText = "🔔 Alarm ringing!";
+      isAlarmSet = false;
+    }
+  }
+}, 1000);

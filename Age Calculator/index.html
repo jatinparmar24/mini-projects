@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    
-  
-<div id="cent">
-    <h1 id="high"> <i>Enter Your Birth Year:-</i></h1> <input type="text" id="aga"> &nbsp;
-     <button onclick="agee()" id="mid"><i>Your Age</i></button> <br>
-     <p id="show"></p>
- 
-   </div>
-
-    <script src="script.js"></script>
+  <div class="container">
+    <h1>🎂 Age Calculator</h1>
+    <p class="subtitle">Enter your birth year to find out your age</p>
+    <input type="text" id="input_age" placeholder="e.g. 2000" />
+    <button onclick="age()">Calculate Age</button>
+    <p id="show"></p>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
