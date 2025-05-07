@@ -1,37 +1,110 @@
-*{
-    margin: 0%;
-    padding: 0cap;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-
-#try{
-    background: linear-gradient(to right,red,blue);
-
-}
-
-#gold{
+  }
+  
+  body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    justify-content: center;
-    margin-top: 12%;
-    font-size: 45px;
-    color: rgb(245, 137, 6);
-    background: linear-gradient(to right,red,blue);
-}
-
-#middle{
-    width: 200px;
-    height: 200px;
-    border: 2px solid black;
-    border-radius: 100%;
-    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(135deg, #1e1e2f, #27293d);
+    color: #ffffff;
+    transition: all 0.5s ease;
+    padding: 20px;
+    position: relative;
+    text-align: center;
+  }
+  
+  #clock-head {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, #ff6ec4, #7873f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  #display {
+    font-size: 2.5rem;
+    padding: 30px 40px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  #theme-toggle {
     position: absolute;
-    left: 43%;
-    margin-top: 5%;
-    background: linear-gradient(coral,yellow,coral);
-}
-#display{
-  color: red;
-}
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    background-color: #ffffff;
+    color: #333333;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+  }
+  
+  body.light {
+    background: linear-gradient(135deg, #f0f0f0, #dcdcdc);
+    color: #111111;
+  }
+  
+  body.light #display {
+    background: rgba(255, 255, 255, 0.5);
+    color: #111111;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+  
+  body.light #theme-toggle {
+    background-color: #222222;
+    color: #ffffff;
+  }
+  
 
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    #clock-head {
+      font-size: 2rem;
+    }
+  
+    #display {
+      font-size: 2rem;
+      padding: 20px 30px;
+    }
+  
+    #theme-toggle {
+      font-size: 0.9rem;
+      padding: 8px 16px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    #clock-head {
+      font-size: 1.5rem;
+    }
+  
+    #display {
+      font-size: 1.5rem;
+      padding: 15px 20px;
+    }
+  
+    #theme-toggle {
+      top: 10px;
+      right: 10px;
+      font-size: 0.8rem;
+    }
+  }
+  

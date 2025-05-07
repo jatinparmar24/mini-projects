@@ -1,9 +1,13 @@
+function updateClock() {
+  const now = new Date();
+  const timeString = now.toLocaleTimeString();
+  document.getElementById("display").textContent = timeString;
+}
 
+setInterval(updateClock, 1000);
+updateClock();
 
-setInterval(() => {
-    let show=document.querySelector("#display")
-    let time= new Date()
-
-    let currenttime=`${time.getHours()}:${time.getMinutes()}:${time.getSeconds()}`
-     show.innerHTML=currenttime
-   },1000)
+const toggleBtn = document.getElementById("theme-toggle");
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light-theme");
+});
